@@ -1,0 +1,20 @@
+package org.boss.recursion;
+
+public class Factorial {
+    public static void main(String[] args) {
+        System.out.println(factorial(5));
+    }
+
+    static int factorial(int n) {
+        if (n == 1 || n == 0)
+            return 1;
+        int fact = factorial(n - 1);
+        return n * fact;
+    }
+
+    static int factorial2(int n) {
+        if (n == 1 || n == 0)
+            return 1;
+        return n * factorial(n - 1);
+    }
+}
