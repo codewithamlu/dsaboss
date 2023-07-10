@@ -37,4 +37,21 @@ public class Subsets {
 
         return res;
     }
+
+    static List<List<Integer>> subsets2(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        solve2(nums, 0, new ArrayList<>(), res);
+        return res;
+    }
+
+    static void solve2(int[] nums, int i, List<Integer> tmp, List<List<Integer>> res) {
+        if (i == nums.length) {
+            res.add(new ArrayList<>(tmp));
+            return;
+        }
+        tmp.add(nums[i]);
+        solve2(nums, i + 1, tmp, res);
+        tmp.remove(tmp.size() - 1);
+        solve2(nums, i + 1, tmp, res);
+    }
 }

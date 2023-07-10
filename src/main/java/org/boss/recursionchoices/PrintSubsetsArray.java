@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PrintSubsetsArray {
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 3 };
+        int[] arr = { 1,2, 2, 3 };
         subsets(arr);
     }
 
