@@ -6,7 +6,7 @@ public class ReverseArray {
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 4, 5 };
 
-        reverseArrayInPlace(arr);
+        reverseArrayStartToEnd(arr, 0, arr.length);
         System.out.println(Arrays.toString(arr));
 
         // int[] ans = reverseArray(arr);
